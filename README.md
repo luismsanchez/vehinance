@@ -10,7 +10,7 @@ Run in console next commands:
 NOTE: You must create a file named secrets.json then write the django project key, and database credentials.
 
 Finally you can run the aplication with the command:
-4. python manage.py runserver
+1. python manage.py runserver
 
 ## To connect spring-boot with MongoDB
 Change the link and credentials in file application.properties, then you can run with the command:
