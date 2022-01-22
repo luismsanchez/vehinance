@@ -15,3 +15,8 @@ Finally you can run the aplication with the command:
 ## To connect spring-boot with MongoDB
 Change the link and credentials in file application.properties, then you can run with the command:
 1. mvn spring-boot:run
+
+## To connect run APIgateway
+Open project and run in console next commands:
+1. npm install
+2. node src/index.js
