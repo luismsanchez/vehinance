@@ -23,9 +23,14 @@ public class TimelineController {
         return this.timelineRepository.findById(id);
     }
 
-    @GetMapping("/timelines/{vehicle}")
+    @GetMapping("/timelines/vehicle/{vehicle}")
     public List<Timeline> getTimelinesByVehicle(@PathVariable Integer vehicle){
         return this.timelineRepository.findByVehicle(vehicle);
+    }
+
+    @GetMapping("/timelines/activity/{activity}")
+    public List<Timeline> getTimelinesByActivity(@PathVariable Integer activity){
+        return this.timelineRepository.findByActivity(activity);
     }
 
     @PostMapping("/timeline")

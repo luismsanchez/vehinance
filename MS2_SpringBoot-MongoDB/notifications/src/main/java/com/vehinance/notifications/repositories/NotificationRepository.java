@@ -7,4 +7,5 @@ import java.util.Date;
 
 public interface NotificationRepository extends MongoRepository<Notification, String>{
     List<Notification> findByVehicle(Integer vehicle);
+    List<Notification> findByActivity(Integer activity);
 }

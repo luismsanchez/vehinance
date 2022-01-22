@@ -24,9 +24,14 @@ public class NotificationController {
         return this.notificationRepository.findById(id);
     }
 
-    @GetMapping("/notifications/{vehicle}")
+    @GetMapping("/notifications/vehicle/{vehicle}")
     public List<Notification> getNotificationsByVehicle(@PathVariable Integer vehicle){
         return this.notificationRepository.findByVehicle(vehicle);
+    }
+
+    @GetMapping("/notifications/activity/{activity}")
+    public List<Notification> getNotificationsByActivity(@PathVariable Integer activity){
+        return this.notificationRepository.findByActivity(activity);
     }
 
     @PostMapping("/notification")

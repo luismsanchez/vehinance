@@ -26,6 +26,21 @@ class Component(models.Model):
         return self.component_name
 
 class Activity(models.Model):
+    CHOICES = (
+        (1, 'daily'),
+        (7, 'weekly'),
+        (30, 'monthly'),
+        (90, 'three-monthly'),
+        (180, 'six-monthly'),
+        (365, 'yearly'),
+        (730, 'two-yearly'),
+        (1095, 'three-yearly'),
+        (1460, 'four-yearly'),
+        (1825, 'five-yearly'),
+        (2190, 'six-yearly'),
+        (2555, 'seven-yearly'),
+        (2920, 'eight-yearly'),
+    ) 
     component = models.ForeignKey(Component, on_delete=models.CASCADE)
     distance_interval = models.PositiveIntegerField(default=0)
     time_interval = models.PositiveIntegerField(default=0)
